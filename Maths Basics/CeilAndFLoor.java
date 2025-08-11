@@ -27,7 +27,7 @@ public class CeilAndFLoor {
 
 
     public static void main(String[] args) {
-        int a = -7, b = 2;
+        int a = 13, b = 17;
 
         ArrayList<Integer> res = ceilAndFloor(a,b);
         System.out.print(res.get(0) + " " + res.get(1));
