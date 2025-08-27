@@ -24,7 +24,7 @@ class PrimeNumber{
     }
 
     public static void main(String[] args) {
-        int num = 101;
+        int num = 1014;
        if(primeNumber(num)){
         System.out.println( num + " is a prime number");
        }
