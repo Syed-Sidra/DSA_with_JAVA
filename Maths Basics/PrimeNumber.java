@@ -16,6 +16,7 @@ class PrimeNumber{
         }
 
         for(int i = 5;i <= Math.sqrt(num); i = i+6){
+            System.out.println("running");
             if(num % i == 0 || num % (i+2) == 0){
                 return false;
             }
@@ -24,7 +25,7 @@ class PrimeNumber{
     }
 
     public static void main(String[] args) {
-        int num = 1014;
+        int num = 12347;
        if(primeNumber(num)){
         System.out.println( num + " is a prime number");
        }
