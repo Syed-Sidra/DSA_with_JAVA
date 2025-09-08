@@ -3,6 +3,7 @@ package linkedlist;
 public class AddFirst {
      public static Node head;
     public static Node tail;
+    public static int size;
     public static class Node{
         int data;
         Node next;
@@ -19,6 +20,7 @@ public class AddFirst {
         return;
        }
        Node newNode = new Node(data);
+       size++;
        Node temp = head;
        int i=0;
        while(i<=idx-1){
@@ -29,11 +31,13 @@ public class AddFirst {
        temp.next=newNode;
     }
     public void addFirst(int data){
+          Node newNode = new Node(data);
+        size++;
         if(head == null){
-            head = tail = null;
+            head = tail = newNode;
             return;
         }
-        Node newNode = new Node(data);
+      
         newNode.next = head;
         head = newNode;
     }
@@ -48,11 +52,12 @@ public class AddFirst {
             System.out.print(temp.data+ " -> ");
             temp = temp.next;
         }
-        System.out.print("null");
+        System.out.println("null");
     }
  }
  public void addLast(int data){
         Node newNode = new Node(data);
+        size++;
         if(head == null){
             head = tail = newNode;
             return;
@@ -62,11 +67,12 @@ public class AddFirst {
     }
     public static void main(String[] args) {
         AddFirst ll = new AddFirst();
-        ll.head = new Node(1);
-        ll.addFirst(10);
-        ll.addFirst(20);
-        ll.addFirst(30);
-       ll.addMid(1,15);
+       ll.addFirst(2);
+       ll.addFirst(1);
+       ll.addLast(3);
+       ll.addLast(4);
+
         printll();
+        System.out.println(size);
     }
 }

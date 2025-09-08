@@ -42,8 +42,9 @@ public class AddLast {
     public static void main(String[] args){
       AddLast ll = new AddLast();
         ll.head = new Node(10);
-        ll.tail = new Node(13);
-        
+        ll.tail = ll.head;
+        ll.head.next = new Node(13);
+        ll.tail = ll.head.next;
         ll.addLast(32);
         
         printll();
