@@ -27,6 +27,9 @@ public class circular {
                 System.out.println("queue is full");
                 return;
             }
+            if(front == -1){
+                front = 0;
+            }
             rear = (rear + 1)% size;
             arr[rear] = data;
         }
